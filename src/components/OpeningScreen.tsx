@@ -86,8 +86,8 @@ const OpeningScreen = ({ onComplete }: OpeningScreenProps) => {
                   Lenilson ❤️ Larissa
                 </h1>
               )}
-              <p className="text-xl md:text-3xl font-inter text-muted-foreground font-light tracking-wide opacity-0 animate-[fadeIn_1s_ease-out_2s_forwards] drop-shadow max-w-xs md:max-w-full mx-auto">
-                Uma história de amor verdadeiro
+              <p className="text-xl md:text-3xl font-inter text-foreground font-light tracking-wide opacity-0 animate-[fadeIn_1s_ease-out_2s_forwards] drop-shadow max-w-xs md:max-w-full mx-auto">
+                Uma história de amor verdadeiro...
               </p>
             </div>
             <div className="flex justify-center space-x-3">

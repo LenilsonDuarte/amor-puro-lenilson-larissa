@@ -129,6 +129,25 @@
     animation: typing-premium 3s steps(40, end), blink-premium 1s step-end infinite;
   }
 
+  @keyframes neon-pulse {
+
+    0%,
+    100% {
+      opacity: 1;
+      filter: drop-shadow(0 0 6px #ec4899) drop-shadow(0 0 12px #ec4899);
+    }
+
+    50% {
+      opacity: 0.7;
+      filter: drop-shadow(0 0 3px #ec4899);
+    }
+  }
+
+  .animate-neon-pulse {
+    animation: neon-pulse 1.2s infinite;
+  }
+
+
   @keyframes typing-premium {
     from {
       width: 0

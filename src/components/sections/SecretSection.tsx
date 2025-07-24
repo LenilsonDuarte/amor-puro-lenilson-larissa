@@ -1,5 +1,5 @@
 import { useState, useEffect, useRef } from 'react';
-import { Lock, Eye, EyeOff, Heart } from 'lucide-react';
+import { Lock, Eye, EyeOff, Heart, Flame } from 'lucide-react';
 import { Button } from '@/components/ui/button';
 import { Input } from '@/components/ui/input';
 import { Card, CardContent } from '@/components/ui/card';
@@ -64,7 +64,6 @@ const SecretSection = () => {
             </p>
           </div>
 
-
           <div className="text-center reveal">
             <Dialog open={isOpen} onOpenChange={setIsOpen}>
               <DialogTrigger asChild>
@@ -77,8 +76,7 @@ const SecretSection = () => {
                 </Button>
               </DialogTrigger>
 
-
-              <DialogContent className="max-w-md">
+              <DialogContent className="max-w-md backdrop-blur-xl bg-black/50 border border-love/20 shadow-xl rounded-2xl">
                 <DialogHeader>
                   <DialogTitle className="text-center text-secret text-2xl font-playfair">
                     🔐 Área Restrita
@@ -86,7 +84,7 @@ const SecretSection = () => {
                 </DialogHeader>
 
                 {!isUnlocked ? (
-                  <div className="space-y-6">
+                  <div className="space-y-6 rounded-xl bg-white/10 backdrop-blur-md p-6 border border-white/10 shadow-lg">
                     <p className="text-center text-muted-foreground">
                       Digite a senha secreta que só nós dois conhecemos...
                     </p>
@@ -113,7 +111,7 @@ const SecretSection = () => {
 
                       {error && (
                         <p className="text-red-500 text-sm text-center">
-                          Ops! Senha incorreta. Tente novamente... 😉
+                          Quer uma dica? Complete a palavra: ascoi... 😉
                         </p>
                       )}
 
@@ -123,57 +121,40 @@ const SecretSection = () => {
                     </form>
                   </div>
                 ) : (
-                  <div className="space-y-6">
-                    <div className="text-center">
-                      <div className="w-20 h-20 mx-auto bg-gradient-secret rounded-full flex items-center justify-center mb-4">
-                        <Heart className="w-10 h-10 text-white heartbeat" />
-                      </div>
-                      <h3 className="text-xl font-playfair font-semibold text-secret mb-4">
-                        Bem-vinda ao nosso cantinho especial! 😏
-                      </h3>
-                    </div>
+                  <div className="space-y-8 text-center px-4 py-6 backdrop-blur-md bg-white/10 border border-white/10 rounded-2xl shadow-xl">
+                    <Flame
+                      className="w-10 h-10 mx-auto text-pink-400 animate-neon-pulse"
+                      style={{
+                        filter: 'drop-shadow(0 0 6px #ec4899) drop-shadow(0 0 12px #ec4899) drop-shadow(0 0 24px #ec4899)',
+                      }}
+                    />
 
-                    <Card className="glass-card border-love/30 romantic-glow backdrop-blur-xl bg-black/60" style={{ maxHeight: '70vh', overflowY: 'auto' }}>
-                      <CardContent className="p-6 text-center">
-                        <p className="text-lg text-foreground mb-4">
-                          Você tem acesso a algo que só nós dois sabemos... 😏
-                        </p>
+                    <p className="text-white/90 mt-4">
+                      Aqui é onde a gente se larga. Onde o meu corpo conhece o teu melhor que qualquer palavra. Onde tua respiração muda só de eu olhar.
+                    </p>
 
-                        <div className="space-y-4 text-foreground/80">
-                          <p className="italic">
-                            "Ascoisa" - nossa palavra secreta e divertida para os momentos mais íntimos...
-                          </p>
+                    <p className="italic text-pink-400 text-lg mt-3">
+                      Gosto demais do nosso código “prascoisa”, ninguém fica sabendo, e enquanto isso, sobe o tesão, loucura, vício, corpo esquenta!
+                    </p>
 
-                          <p>
-                            É incrível como criamos nossa própria linguagem do amor,
-                            cheia de carinho, humor e cumplicidade.
-                          </p>
+                    <p className="text-white/80 mt-4">
+                      Eu sei o que te faz tremer. Tu sabe onde me desmonta. E é aqui que a gente deixa de fingir controle.
+                    </p>
 
-                          <p className="font-semibold text-secret">
-                            Esses momentos são só nossos, guardados no coração e na memória,
-                            onde o amor se expressa de todas as formas possíveis. ❤️
-                          </p>
+                    <p className="text-pink-200 font-semibold mt-4">
+                      Aqui não tem pudor. Tem pele, tem língua, tem eu dentro ti.
+                    </p>
 
-                          <div className="mt-6 p-4 bg-love/10 rounded-lg">
-                            <p className="text-sm italic">
-                              "O amor verdadeiro se expressa em todos os momentos,
-                              dos mais delicados aos mais intensos,
-                              sempre com carinho, respeito e muita paixão."
-                            </p>
-                          </div>
-                        </div>
-                      </CardContent>
-                    </Card>
-
-                    <div className="text-center">
-                      <Button
-                        variant="outline"
-                        onClick={resetSecret}
-                        className="border-secret/30"
-                      >
-                        Fechar área secreta
-                      </Button>
-                    </div>
+                    <p className="text-sm italic text-white/70 mt-6">
+                      Nosso tesão é bruto, quente e sem filtro. E é exatamente assim que tem que ser.
+                    </p>
+                    <Button
+                      variant="ghost"
+                      onClick={resetSecret}
+                      className="mt-6 text-white hover:bg-white/10 transition"
+                    >
+                      Fechar
+                    </Button>
                   </div>
                 )}
               </DialogContent>

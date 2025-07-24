@@ -10,7 +10,6 @@ import Gallery from '@/components/sections/Gallery';
 import LoveLetter from '@/components/sections/LoveLetter';
 import Promises from '@/components/sections/Promises';
 import SecretSection from '@/components/sections/SecretSection';
-import FinalSurprise from '@/components/sections/FinalSurprise';
 import Footer from '@/components/Footer';
 
 const Index = () => {
@@ -25,19 +24,19 @@ const Index = () => {
       {/* Premium Effects & Background */}
       <VideoBackground />
       <PremiumEffects />
-      
+
       {/* Music Player */}
       <MusicPlayer />
-      
+
       {/* Opening Screen */}
       {!showContent && <OpeningScreen onComplete={handleOpeningComplete} />}
-      
+
       {/* Main Content */}
       {showContent && (
         <>
           {/* Navigation */}
           <Navigation />
-          
+
           {/* Main Content */}
           <main className="relative z-10">
             <OurStory />
@@ -46,9 +45,8 @@ const Index = () => {
             <LoveLetter />
             <Promises />
             <SecretSection />
-            <FinalSurprise />
           </main>
-          
+
           {/* Footer */}
           <Footer />
         </>

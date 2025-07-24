@@ -10,22 +10,13 @@ const LoveLetter = () => {
   const sectionRef = useRef<HTMLDivElement>(null);
 
   // TODO: Replace with actual personal letter from Lenilson to Larissa
-  const letterText = `Minha querida Larissa,
+  const letterText = `Hoje, no nosso dia, eu respiro fundo e tento, mesmo que em vão, colocar em palavras tudo aquilo que transborda em mim desde que você entrou na minha vida. Mas não é simples. Como explicar o que é amar alguém tão profundamente a ponto de desejar que o tempo se curve, que o mundo se ajeite e que o universo inteiro conspire só para te ver sorrir pra mim?
 
-Quando penso em como chegamos até aqui, meu coração se enche de gratidão e amor. Você é muito mais do que eu jamais sonhei encontrar.
+Você não é só a mulher com quem eu namoro. Você é o meu sonho acordado, a calma no caos, o destino mais bonito que a vida poderia me dar. Quando olho para você, vejo muitos pequenos correndo pela casa, nosso Antônio, Júlia, Eliza e Joaquim, a gente, rindo de tudo, viajando, crescendo, vencendo o mundo juntos, vivendo com o melhor que o mundo tem pra nos dar.
 
-Desde nosso primeiro encontro em 2015, passando pelo reencontro em 2020, até nossa reaproximação em 2022, sinto que o universo conspirou para nos unir no momento perfeito.
+A gente não tem só um relacionamento, a gente tem uma história. Um amor que não cabe em palavras. Amor que pulsa em cada detalhe, em cada olhar que se cruza, em cada abraço que dá sentido a tudo. E é por isso que hoje, eu quis mais do que dizer que te amo. Eu quis deixar registrado que eu te amo infinito ❤️❤️❤️❤️❤️❤️❤️! Com todas as batidas do meu coração e com cada célula do meu corpo!
 
-Lembro do nosso primeiro beijo na Subway, em frente ao seu condomínio. Naquele momento, ainda nem namorávamos, mas já falávamos sobre Antônio, Júlia, Eliza e Joaquim. Já sabíamos que éramos feitos um para o outro.
-
-Somos incrivelmente parecidos e conectados em tudo: nossos gostos, ideias, jeitos e objetivos. É como se fôssemos duas metades de uma mesma alma.
-
-Prometo cuidar do seu sorriso todos os dias, realizar seus sonhos e construir nossa família ao seu lado. Quero envelhecer com você e viver todas as aventuras que a vida nos reserva.
-
-Você é meu lar, minha paz, minha felicidade infinita.
-
-Com todo meu amor,
-Lenilson ❤️`;
+Hoje e sempre, sou teu, com tudo o que há de mim!`;
 
   useEffect(() => {
     const observer = new IntersectionObserver(
@@ -82,11 +73,8 @@ Lenilson ❤️`;
           <div className="text-center mb-16 reveal">
             <Mail className="w-12 h-12 mx-auto text-love mb-6 animate-bounce" />
             <h2 className="text-5xl md:text-7xl font-playfair font-bold text-secret drop-shadow-glow mb-8">
-              Cartinha do Coração
+              Correio chegou!
             </h2>
-            <p className="text-xl text-muted-foreground font-inter animate-fade-in">
-              Palavras escritas com todo amor do mundo
-            </p>
           </div>
 
           <div className="relative reveal flex flex-col items-center justify-center min-h-[400px]">
@@ -136,7 +124,6 @@ Lenilson ❤️`;
                 <div className="relative z-10 animate-slide-up">
                   <div className="mx-auto w-80 min-h-[320px] rounded-2xl bg-white/95 border border-yellow-200 shadow-2xl p-8 flex flex-col items-center justify-center" style={{ fontFamily: 'Pacifico, cursive', color: '#a86b3c', boxShadow: '0 8px 32px 0 rgba(255, 200, 80, 0.18)' }}>
                     <Heart className="w-8 h-8 mx-auto text-love mb-4 heartbeat animate-pulse" />
-                    <h3 className="text-2xl font-pacifico text-yellow-700 mb-4">Para minha amada Larissa</h3>
                     <div className="prose prose-lg max-w-none text-center">
                       <div className="whitespace-pre-line leading-relaxed animate-letter-write" style={{ minHeight: 180 }}>
                         {displayedText}
