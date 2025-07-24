@@ -35,7 +35,7 @@ const FinalSurprise = () => {
     firework.style.left = Math.random() * window.innerWidth + 'px';
     firework.style.top = Math.random() * window.innerHeight + 'px';
     firework.style.backgroundColor = colors[Math.floor(Math.random() * colors.length)];
-    
+
     const fireworksContainer = document.querySelector('.fireworks');
     if (fireworksContainer) {
       fireworksContainer.appendChild(firework);
@@ -46,20 +46,20 @@ const FinalSurprise = () => {
   const triggerSurprise = () => {
     setIsRevealed(true);
     setShowFireworks(true);
-    
+
     // Create multiple fireworks
     const fireworkInterval = setInterval(() => {
       for (let i = 0; i < 5; i++) {
         setTimeout(() => createFirework(), i * 100);
       }
     }, 300);
-    
+
     // Stop fireworks after 3 seconds
     setTimeout(() => {
       clearInterval(fireworkInterval);
       setShowFireworks(false);
     }, 3000);
-    
+
     // Show messages with delays
     setTimeout(() => setShowMessage(true), 1000);
     setTimeout(() => setShowFinalMessage(true), 3000);
@@ -68,7 +68,7 @@ const FinalSurprise = () => {
   return (
     <section id="surpresa" ref={sectionRef} className="relative py-20 md:py-32 bg-gradient-dreamy">
       {showFireworks && <div className="fireworks"></div>}
-      
+
       <div className="container mx-auto px-4">
         <div className="max-w-4xl mx-auto">
           {!isRevealed ? (
@@ -82,7 +82,7 @@ const FinalSurprise = () => {
                   Há algo muito especial aqui... mas você foi avisada! 😳
                 </p>
               </div>
-              
+
               <Button
                 onClick={triggerSurprise}
                 size="lg"
@@ -96,7 +96,7 @@ const FinalSurprise = () => {
           ) : (
             <div className="space-y-12">
               {showMessage && (
-                <Card className="romantic-glow bg-gradient-romantic border-love/30 fade-in">
+                <Card className="glass-card border-love/30 romantic-glow backdrop-blur-xl bg-black/60 fade-in">
                   <CardContent className="p-12 text-center">
                     <Sparkles className="w-16 h-16 mx-auto text-love mb-8 animate-spin" />
                     <h2 className="text-3xl md:text-5xl font-playfair font-bold text-foreground mb-8 leading-tight">
@@ -111,24 +111,24 @@ const FinalSurprise = () => {
                   </CardContent>
                 </Card>
               )}
-              
+
               {showFinalMessage && (
-                <Card className="romantic-glow bg-gradient-to-br from-love/20 to-love/10 border-love/40 fade-in">
+                <Card className="glass-card border-love/30 romantic-glow backdrop-blur-xl bg-black/60 fade-in">
                   <CardContent className="p-12 text-center">
                     <div className="flex justify-center gap-2 mb-8">
                       {[...Array(7)].map((_, i) => (
-                        <Heart 
-                          key={i} 
-                          className="w-8 h-8 text-love heartbeat" 
+                        <Heart
+                          key={i}
+                          className="w-8 h-8 text-love heartbeat"
                           style={{ animationDelay: `${i * 0.2}s` }}
                         />
                       ))}
                     </div>
-                    
+
                     <h2 className="text-4xl md:text-6xl font-playfair font-bold text-love mb-8">
                       Te amo infinito
                     </h2>
-                    
+
                     <div className="space-y-6 text-foreground/80">
                       <p className="text-lg italic">
                         Os 7 corações vermelhos têm um significado especial:

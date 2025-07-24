@@ -67,7 +67,7 @@ const SecretSection = () => {
           <div className="text-center reveal">
             <Dialog open={isOpen} onOpenChange={setIsOpen}>
               <DialogTrigger asChild>
-                <Button 
+                <Button
                   size="lg"
                   className="bg-gradient-secret hover:shadow-xl transition-all duration-300 text-lg px-8 py-4"
                 >
@@ -75,20 +75,20 @@ const SecretSection = () => {
                   Entrar na Área Secreta
                 </Button>
               </DialogTrigger>
-              
+
               <DialogContent className="max-w-md">
                 <DialogHeader>
                   <DialogTitle className="text-center text-secret text-2xl font-playfair">
                     🔐 Área Restrita
                   </DialogTitle>
                 </DialogHeader>
-                
+
                 {!isUnlocked ? (
                   <div className="space-y-6">
                     <p className="text-center text-muted-foreground">
                       Digite a senha secreta que só nós dois conhecemos...
                     </p>
-                    
+
                     <form onSubmit={handlePasswordSubmit} className="space-y-4">
                       <div className="relative">
                         <Input
@@ -108,13 +108,13 @@ const SecretSection = () => {
                           {showPassword ? <EyeOff className="w-4 h-4" /> : <Eye className="w-4 h-4" />}
                         </Button>
                       </div>
-                      
+
                       {error && (
                         <p className="text-red-500 text-sm text-center">
                           Ops! Senha incorreta. Tente novamente... 😉
                         </p>
                       )}
-                      
+
                       <Button type="submit" className="w-full bg-gradient-secret">
                         Desbloquear
                       </Button>
@@ -130,28 +130,28 @@ const SecretSection = () => {
                         Bem-vinda ao nosso cantinho especial! 😏
                       </h3>
                     </div>
-                    
-                    <Card className="bg-gradient-secret/10 border-secret/20">
+
+                    <Card className="glass-card border-love/30 romantic-glow backdrop-blur-xl bg-black/60">
                       <CardContent className="p-6 text-center">
                         <p className="text-lg text-foreground mb-4">
                           Você tem acesso a algo que só nós dois sabemos... 😏
                         </p>
-                        
+
                         <div className="space-y-4 text-foreground/80">
                           <p className="italic">
                             "Ascoisa" - nossa palavra secreta e divertida para os momentos mais íntimos...
                           </p>
-                          
+
                           <p>
-                            É incrível como criamos nossa própria linguagem do amor, 
+                            É incrível como criamos nossa própria linguagem do amor,
                             cheia de carinho, humor e cumplicidade.
                           </p>
-                          
+
                           <p className="font-semibold text-secret">
                             Esses momentos são só nossos, guardados no coração e na memória,
                             onde o amor se expressa de todas as formas possíveis. ❤️
                           </p>
-                          
+
                           <div className="mt-6 p-4 bg-love/10 rounded-lg">
                             <p className="text-sm italic">
                               "O amor verdadeiro se expressa em todos os momentos,
@@ -162,10 +162,10 @@ const SecretSection = () => {
                         </div>
                       </CardContent>
                     </Card>
-                    
+
                     <div className="text-center">
-                      <Button 
-                        variant="outline" 
+                      <Button
+                        variant="outline"
                         onClick={resetSecret}
                         className="border-secret/30"
                       >

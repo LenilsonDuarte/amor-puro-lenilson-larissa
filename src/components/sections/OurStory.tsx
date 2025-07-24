@@ -25,23 +25,23 @@ const OurStory = () => {
   }, []);
 
   return (
-    <section id="nossa-historia" ref={sectionRef} className="relative py-32 md:py-48">
+    <section id="nossa-historia" ref={sectionRef} className="relative py-32 md:py-48 bg-gradient-dreamy">
       <div className="container mx-auto px-6">
         <div className="max-w-5xl mx-auto">
           <ParallaxContainer>
             <div className="text-center mb-24 reveal-premium">
-              <Heart className="w-16 h-16 mx-auto text-love mb-8 heartbeat-premium" />
-              <h2 className="text-5xl md:text-7xl font-sf font-bold text-foreground mb-8 tracking-tight">
+              <Heart className="w-16 h-16 mx-auto text-love mb-8 heartbeat-premium drop-shadow-lg" />
+              <h2 className="text-5xl md:text-7xl font-sf font-bold text-foreground mb-8 tracking-tight drop-shadow">
                 Nossa História
               </h2>
-              <p className="text-2xl text-muted-foreground font-inter font-light tracking-wide">
+              <p className="text-2xl text-muted-foreground font-inter font-light tracking-wide drop-shadow">
                 Uma conexão que transcende o tempo e a distância
               </p>
             </div>
           </ParallaxContainer>
 
           <div className="space-y-16">
-            <Card className="glass-card hover-lift glow-premium border-primary/10 reveal-premium">
+            <Card className="glass-card border-love/30 romantic-glow backdrop-blur-xl bg-black/60 hover-lift reveal-premium shadow-lg">
               <CardContent className="p-12">
                 <div className="flex items-start gap-6 mb-8">
                   <Calendar className="w-8 h-8 text-primary mt-2 flex-shrink-0" />
@@ -50,8 +50,8 @@ const OurStory = () => {
                       O Primeiro Encontro (2015)
                     </h3>
                     <p className="text-muted-foreground text-lg leading-relaxed">
-                      Oito anos atrás, o destino nos apresentou pela primeira vez. 
-                      Dois corações jovens se cruzaram, sem saber que aquele momento 
+                      Oito anos atrás, o destino nos apresentou pela primeira vez.
+                      Dois corações jovens se cruzaram, sem saber que aquele momento
                       seria o início de algo extraordinário que floresceria anos depois.
                     </p>
                   </div>
@@ -59,7 +59,7 @@ const OurStory = () => {
               </CardContent>
             </Card>
 
-            <Card className="glass-card hover-lift glow-premium border-secondary/10 reveal-premium" style={{ animationDelay: '0.2s' }}>
+            <Card className="glass-card border-love/30 romantic-glow backdrop-blur-xl bg-black/60 hover-lift reveal-premium shadow-lg" style={{ animationDelay: '0.2s' }}>
               <CardContent className="p-12">
                 <div className="flex items-start gap-6 mb-8">
                   <MapPin className="w-8 h-8 text-secondary mt-2 flex-shrink-0" />
@@ -68,8 +68,8 @@ const OurStory = () => {
                       O Reencontro (2020)
                     </h3>
                     <p className="text-muted-foreground text-lg leading-relaxed">
-                      Cinco anos depois, a vida nos trouxe de volta. Conversas tímidas, 
-                      sorrisos reconhecidos, mas ainda não era o momento certo. 
+                      Cinco anos depois, a vida nos trouxe de volta. Conversas tímidas,
+                      sorrisos reconhecidos, mas ainda não era o momento certo.
                       O coração já sabia, mas a mente ainda guardava mistérios.
                     </p>
                   </div>
@@ -77,7 +77,7 @@ const OurStory = () => {
               </CardContent>
             </Card>
 
-            <Card className="glass-card hover-lift glow-premium border-accent/10 reveal-premium" style={{ animationDelay: '0.4s' }}>
+            <Card className="glass-card border-love/30 romantic-glow backdrop-blur-xl bg-black/60 hover-lift reveal-premium shadow-lg" style={{ animationDelay: '0.4s' }}>
               <CardContent className="p-12">
                 <div className="flex items-start gap-6 mb-8">
                   <Heart className="w-8 h-8 text-accent mt-2 flex-shrink-0" />
@@ -86,8 +86,8 @@ const OurStory = () => {
                       A Reaproximação (Final de 2022)
                     </h3>
                     <p className="text-muted-foreground text-lg leading-relaxed">
-                      Quando o universo decidiu que era a hora certa, nós nos reaproximamos. 
-                      Como duas almas que sempre estiveram destinadas a se encontrar, 
+                      Quando o universo decidiu que era a hora certa, nós nos reaproximamos.
+                      Como duas almas que sempre estiveram destinadas a se encontrar,
                       descobrimos uma conexão única e inexplicável.
                     </p>
                   </div>
@@ -95,7 +95,7 @@ const OurStory = () => {
               </CardContent>
             </Card>
 
-            <Card className="glass-card hover-lift glow-premium border-love/20 reveal-premium" style={{ animationDelay: '0.6s' }}>
+            <Card className="glass-card border-love/30 romantic-glow backdrop-blur-xl bg-black/60 hover-lift reveal-premium shadow-lg" style={{ animationDelay: '0.6s' }}>
               <CardContent className="p-12">
                 <div className="flex items-start gap-6 mb-8">
                   <Heart className="w-8 h-8 text-love mt-2 flex-shrink-0 heartbeat-premium" />
@@ -104,13 +104,13 @@ const OurStory = () => {
                       O Primeiro Beijo na Subway
                     </h3>
                     <p className="text-muted-foreground text-lg leading-relaxed mb-6">
-                      Em frente ao seu condomínio, na Subway, aconteceu o momento mais 
-                      mágico de nossas vidas. Ainda nem namorávamos, mas já éramos um só. 
-                      O primeiro beijo selou o que nossos corações já sabiam: 
+                      Em frente ao seu condomínio, na Subway, aconteceu o momento mais
+                      mágico de nossas vidas. Ainda nem namorávamos, mas já éramos um só.
+                      O primeiro beijo selou o que nossos corações já sabiam:
                       éramos feitos um para o outro.
                     </p>
                     <p className="text-foreground font-semibold text-xl italic leading-relaxed">
-                      "Ainda nem namorávamos e já falávamos sobre nomes de filhos: 
+                      "Ainda nem namorávamos e já falávamos sobre nomes de filhos:
                       Antônio, Júlia, Eliza e Joaquim."
                     </p>
                   </div>
@@ -119,14 +119,14 @@ const OurStory = () => {
             </Card>
 
             <ParallaxContainer>
-              <Card className="glass border-love/30 bg-gradient-hero/5 hover-lift reveal-premium" style={{ animationDelay: '0.8s' }}>
+              <Card className="glass-card border-love/30 romantic-glow backdrop-blur-xl bg-black/60 hover-lift reveal-premium shadow-lg" style={{ animationDelay: '0.8s' }}>
                 <CardContent className="p-16 text-center">
-                  <h3 className="text-4xl font-sf font-bold text-foreground mb-6 tracking-tight">
+                  <h3 className="text-4xl font-sf font-bold text-foreground mb-6 tracking-tight drop-shadow">
                     Almas Gêmeas
                   </h3>
-                  <p className="text-xl text-foreground/80 leading-relaxed max-w-3xl mx-auto">
-                    Somos incrivelmente parecidos e conectados em tudo: gostos, ideias, 
-                    jeitos e objetivos. Como se fôssemos duas metades de uma mesma alma, 
+                  <p className="text-xl text-foreground/80 leading-relaxed max-w-3xl mx-auto drop-shadow">
+                    Somos incrivelmente parecidos e conectados em tudo: gostos, ideias,
+                    jeitos e objetivos. Como se fôssemos duas metades de uma mesma alma,
                     encontramos um no outro não apenas um amor, mas um lar.
                   </p>
                 </CardContent>

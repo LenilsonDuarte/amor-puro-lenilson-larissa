@@ -99,11 +99,10 @@ const Timeline = () => {
                 const isEven = index % 2 === 0;
 
                 return (
-                  <div 
-                    key={index} 
-                    className={`relative reveal flex items-center ${
-                      isEven ? 'md:flex-row' : 'md:flex-row-reverse'
-                    }`}
+                  <div
+                    key={index}
+                    className={`relative reveal flex items-center ${isEven ? 'md:flex-row' : 'md:flex-row-reverse'
+                      }`}
                     style={{ animationDelay: `${index * 0.2}s` }}
                   >
                     {/* Timeline Icon */}
@@ -115,7 +114,7 @@ const Timeline = () => {
 
                     {/* Content Card */}
                     <div className={`w-full md:w-5/12 ml-20 md:ml-0 ${isEven ? 'md:mr-auto md:pr-8' : 'md:ml-auto md:pl-8'}`}>
-                      <Card className="romantic-glow">
+                      <Card className="glass-card border-love/30 romantic-glow backdrop-blur-xl bg-black/60">
                         <CardContent className="p-6">
                           <div className="flex items-center gap-3 mb-3">
                             <span className={`px-3 py-1 rounded-full text-sm font-semibold bg-${event.color}/20 text-${event.color}`}>
@@ -139,14 +138,14 @@ const Timeline = () => {
 
           {/* Special highlight for official dating start */}
           <div className="mt-16 text-center reveal">
-            <Card className="bg-gradient-romantic border-love/30 romantic-glow">
+            <Card className="glass-card border-love/30 romantic-glow backdrop-blur-xl bg-black/60">
               <CardContent className="p-8">
                 <Heart className="w-16 h-16 mx-auto text-love mb-6 heartbeat" />
                 <h3 className="text-3xl font-playfair font-bold text-foreground mb-4">
                   24 de Julho de 2023
                 </h3>
                 <p className="text-xl text-foreground/80 leading-relaxed">
-                  O dia em que nossa história de amor ganhou seu primeiro capítulo oficial. 
+                  O dia em que nossa história de amor ganhou seu primeiro capítulo oficial.
                   Hoje celebramos dois anos de um amor que cresce a cada dia.
                 </p>
                 <div className="mt-6 flex justify-center">

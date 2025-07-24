@@ -24,10 +24,11 @@ const VideoBackground = ({ className = "", overlay = true }: VideoBackgroundProp
   return (
     <div className={`fixed inset-0 z-0 overflow-hidden ${className}`}>
       {/* Parallax Background */}
-      <div 
+      <div
         className="absolute inset-0 bg-cover bg-center bg-no-repeat transition-transform duration-1000 ease-out scale-110"
         style={{
           backgroundImage: `url(${backgroundImage})`,
+          // Removido: filter: 'brightness(0.45) contrast(1.1) saturate(1.1)',
           transform: `
             scale(1.1) 
             translateX(${mousePosition.x * 10}px) 
@@ -35,36 +36,9 @@ const VideoBackground = ({ className = "", overlay = true }: VideoBackgroundProp
           `,
         }}
       />
-      
-      {/* TODO: Replace above div with video element when video is provided */}
-      {/* 
-      <video
-        ref={videoRef}
-        className="absolute inset-0 w-full h-full object-cover scale-110 transition-transform duration-1000"
-        style={{
-          transform: `
-            scale(1.1) 
-            translateX(${mousePosition.x * 5}px) 
-            translateY(${mousePosition.y * 5}px)
-          `,
-        }}
-        autoPlay
-        muted
-        loop
-        playsInline
-      >
-        <source src="/path-to-romantic-video.mp4" type="video/mp4" />
-      </video>
-      */}
-      
-      {/* Premium Overlay */}
-      {overlay && (
-        <>
-          <div className="absolute inset-0 bg-gradient-to-br from-background/40 via-transparent to-background/60" />
-          <div className="absolute inset-0 bg-gradient-mesh opacity-80" />
-          <div className="absolute inset-0 backdrop-blur-[0.5px]" />
-        </>
-      )}
+      {/* Removidos todos os overlays, gradientes, granulação e blur do fundo */}
+      {/* Nada além do fundo visível */}
+      {overlay && (<></>)}
     </div>
   );
 };

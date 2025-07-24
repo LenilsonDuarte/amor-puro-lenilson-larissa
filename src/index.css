@@ -1,91 +1,78 @@
+@import url('https://fonts.googleapis.com/css2?family=Pacifico&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;700;800;900&family=SF+Pro+Display:wght@100;200;300;400;500;600;700;800;900&display=swap');
 
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
 
-/* Apple-Inspired Premium Design System */
+/* Apple-Inspired Premium Dark Design System */
 
 @layer base {
   :root {
-    /* Apple-Inspired Premium Palette */
-    --background: 0 0% 98%;
-    --foreground: 0 0% 10%;
+    /* Premium Dark Palette */
+    --background: 220 20% 8%;
+    --foreground: 0 0% 95%;
 
-    --card: 0 0% 100%;
-    --card-foreground: 0 0% 10%;
+    --card: 220 25% 10%;
+    --card-foreground: 0 0% 95%;
 
-    --popover: 0 0% 100%;
-    --popover-foreground: 0 0% 10%;
+    --popover: 220 25% 12%;
+    --popover-foreground: 0 0% 95%;
 
-    /* Sophisticated Primary - Deep Space Gray */
-    --primary: 220 20% 15%;
+    --primary: 345 70% 65%;
+    /* Pink sofisticado para destaque */
     --primary-foreground: 0 0% 98%;
 
-    /* Elegant Secondary - Pearl White */
-    --secondary: 210 20% 96%;
-    --secondary-foreground: 220 20% 15%;
+    --secondary: 220 20% 15%;
+    --secondary-foreground: 0 0% 95%;
 
-    /* Refined Muted */
-    --muted: 210 20% 94%;
-    --muted-foreground: 220 10% 40%;
+    --muted: 220 25% 12%;
+    --muted-foreground: 220 10% 60%;
 
-    /* Luxury Accent - Rose Gold */
-    --accent: 15 60% 85%;
-    --accent-foreground: 220 20% 15%;
+    --accent: 15 60% 45%;
+    /* Rose Gold escuro */
+    --accent-foreground: 0 0% 98%;
 
-    /* Romantic Love - Sophisticated Pink */
     --love: 345 70% 65%;
     --love-foreground: 0 0% 98%;
 
-    /* Premium Secret - Deep Burgundy */
     --secret: 345 40% 35%;
     --secret-foreground: 0 0% 98%;
 
     --destructive: 0 84.2% 60.2%;
     --destructive-foreground: 210 40% 98%;
 
-    --border: 220 15% 88%;
-    --input: 220 15% 88%;
-    --ring: 220 20% 15%;
+    --border: 220 20% 18%;
+    --input: 220 20% 18%;
+    --ring: 345 70% 65%;
 
     --radius: 1.5rem;
 
-    /* Premium Gradients */
-    --gradient-hero: linear-gradient(135deg, hsl(220, 20%, 15%) 0%, hsl(345, 40%, 35%) 50%, hsl(15, 60%, 85%) 100%);
-    --gradient-glass: linear-gradient(135deg, hsla(0, 0%, 100%, 0.1) 0%, hsla(0, 0%, 100%, 0.05) 100%);
-    --gradient-mesh: radial-gradient(ellipse at top, hsl(345, 70%, 65%, 0.1) 0%, transparent 50%),
-                     radial-gradient(ellipse at bottom right, hsl(15, 60%, 85%, 0.1) 0%, transparent 50%),
-                     radial-gradient(ellipse at bottom left, hsl(220, 20%, 15%, 0.05) 0%, transparent 50%);
-    --gradient-premium: linear-gradient(180deg, hsla(0, 0%, 100%, 0.02) 0%, hsla(0, 0%, 100%, 0.01) 100%);
+    /* Premium Gradients - DARK */
+    --gradient-hero: linear-gradient(135deg, hsl(220, 20%, 12%) 0%, hsl(345, 40%, 25%) 50%, hsl(15, 60%, 25%) 100%);
+    --gradient-glass: linear-gradient(135deg, hsla(220, 20%, 20%, 0.7) 0%, hsla(345, 40%, 20%, 0.5) 100%);
+    --gradient-mesh: radial-gradient(ellipse at top, hsl(345, 70%, 25%, 0.18) 0%, transparent 50%),
+      radial-gradient(ellipse at bottom right, hsl(15, 60%, 25%, 0.12) 0%, transparent 50%),
+      radial-gradient(ellipse at bottom left, hsl(220, 20%, 12%, 0.10) 0%, transparent 50%);
+    --gradient-premium: linear-gradient(180deg, hsla(220, 20%, 20%, 0.12) 0%, hsla(345, 40%, 20%, 0.10) 100%);
+    --gradient-dreamy: linear-gradient(120deg, hsl(220, 20%, 12%) 0%, hsl(345, 40%, 25%) 100%);
+    --gradient-romantic: linear-gradient(135deg, hsl(345, 70%, 35%) 0%, hsl(15, 60%, 25%) 100%);
+    --gradient-secret: linear-gradient(135deg, hsl(345, 40%, 25%) 0%, hsl(220, 20%, 12%) 100%);
+    --gradient-golden: linear-gradient(135deg, #bfa14a 0%, #6e5522 100%);
 
-    /* Apple-Style Shadows */
-    --shadow-sm: 0 1px 2px 0 rgb(0 0 0 / 0.05);
-    --shadow-md: 0 4px 6px -1px rgb(0 0 0 / 0.1), 0 2px 4px -2px rgb(0 0 0 / 0.1);
-    --shadow-lg: 0 10px 15px -3px rgb(0 0 0 / 0.1), 0 4px 6px -4px rgb(0 0 0 / 0.1);
-    --shadow-xl: 0 20px 25px -5px rgb(0 0 0 / 0.1), 0 8px 10px -6px rgb(0 0 0 / 0.1);
-    --shadow-2xl: 0 25px 50px -12px rgb(0 0 0 / 0.25);
-    --shadow-premium: 0 32px 64px -12px rgb(0 0 0 / 0.15), 0 0 0 1px rgb(255 255 255 / 0.05);
-    --shadow-glow: 0 0 40px hsl(345 70% 65% / 0.3);
+    /* Apple-Style Shadows - DARK */
+    --shadow-sm: 0 1px 2px 0 rgb(0 0 0 / 0.25);
+    --shadow-md: 0 4px 6px -1px rgb(0 0 0 / 0.35), 0 2px 4px -2px rgb(0 0 0 / 0.25);
+    --shadow-lg: 0 10px 15px -3px rgb(0 0 0 / 0.40), 0 4px 6px -4px rgb(0 0 0 / 0.30);
+    --shadow-xl: 0 20px 25px -5px rgb(0 0 0 / 0.45), 0 8px 10px -6px rgb(0 0 0 / 0.35);
+    --shadow-2xl: 0 25px 50px -12px rgb(0 0 0 / 0.60);
+    --shadow-premium: 0 32px 64px -12px rgb(0 0 0 / 0.35), 0 0 0 1px rgb(255 255 255 / 0.04);
+    --shadow-glow: 0 0 40px hsl(345 70% 65% / 0.25);
 
     /* Fluid Transitions */
     --transition-premium: all 0.4s cubic-bezier(0.25, 0.46, 0.45, 0.94);
     --transition-smooth: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
     --transition-bounce: all 0.5s cubic-bezier(0.68, -0.55, 0.265, 1.55);
-  }
-
-  .dark {
-    --background: 220 20% 8%;
-    --foreground: 0 0% 95%;
-    --card: 220 25% 10%;
-    --card-foreground: 0 0% 95%;
-    --primary: 0 0% 95%;
-    --secondary: 220 20% 15%;
-    --muted: 220 25% 12%;
-    --accent: 15 60% 75%;
-    --border: 220 20% 18%;
-    --input: 220 20% 18%;
-    --ring: 0 0% 95%;
   }
 }
 
@@ -94,15 +81,21 @@
     @apply border-border;
   }
 
+  html,
   body {
-    @apply bg-background text-foreground;
+    @apply text-foreground;
     font-family: 'Inter', 'SF Pro Display', -apple-system, BlinkMacSystemFont, system-ui, sans-serif;
-    background: var(--gradient-mesh), hsl(var(--background));
+    background: none !important;
     min-height: 100vh;
     overflow-x: hidden;
   }
 
-  h1, h2, h3, h4, h5, h6 {
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6 {
     font-family: 'SF Pro Display', 'Inter', -apple-system, BlinkMacSystemFont, system-ui, sans-serif;
     font-weight: 600;
     letter-spacing: -0.02em;
@@ -110,19 +103,20 @@
 }
 
 @layer components {
-  /* Apple-Style Glass Morphism */
+
+  /* Apple-Style Glass Morphism - DARK */
   .glass {
     background: var(--gradient-glass);
-    backdrop-filter: blur(20px) saturate(180%);
-    border: 1px solid hsla(0, 0%, 100%, 0.1);
+    backdrop-filter: blur(24px) saturate(180%);
+    border: 1px solid hsla(345, 40%, 25%, 0.18);
     box-shadow: var(--shadow-premium);
   }
 
   .glass-card {
-    background: hsla(0, 0%, 100%, 0.03);
-    backdrop-filter: blur(40px) saturate(200%);
-    border: 1px solid hsla(0, 0%, 100%, 0.08);
-    box-shadow: var(--shadow-xl), inset 0 1px 0 hsla(0, 0%, 100%, 0.1);
+    background: hsla(220, 20%, 12%, 0.25);
+    backdrop-filter: blur(48px) saturate(220%);
+    border: 1px solid hsla(345, 40%, 25%, 0.12);
+    box-shadow: var(--shadow-xl), inset 0 1px 0 hsla(345, 40%, 25%, 0.10);
   }
 
   /* Premium Typewriter Effect */
@@ -136,13 +130,25 @@
   }
 
   @keyframes typing-premium {
-    from { width: 0 }
-    to { width: 100% }
+    from {
+      width: 0
+    }
+
+    to {
+      width: 100%
+    }
   }
 
   @keyframes blink-premium {
-    from, to { border-color: transparent }
-    50% { border-color: hsl(var(--love)) }
+
+    from,
+    to {
+      border-color: transparent
+    }
+
+    50% {
+      border-color: hsl(var(--love))
+    }
   }
 
   /* Floating with Physics */
@@ -151,10 +157,23 @@
   }
 
   @keyframes float-premium {
-    0%, 100% { transform: translateY(0px) rotate(0deg) }
-    25% { transform: translateY(-10px) rotate(0.5deg) }
-    50% { transform: translateY(-20px) rotate(0deg) }
-    75% { transform: translateY(-10px) rotate(-0.5deg) }
+
+    0%,
+    100% {
+      transform: translateY(0px) rotate(0deg)
+    }
+
+    25% {
+      transform: translateY(-10px) rotate(0.5deg)
+    }
+
+    50% {
+      transform: translateY(-20px) rotate(0deg)
+    }
+
+    75% {
+      transform: translateY(-10px) rotate(-0.5deg)
+    }
   }
 
   /* Premium Hover Effects */
@@ -198,8 +217,8 @@
   /* Sophisticated Blur Background */
   .blur-bg {
     backdrop-filter: blur(40px) saturate(200%);
-    background: hsla(0, 0%, 100%, 0.05);
-    border: 1px solid hsla(0, 0%, 100%, 0.1);
+    background: hsla(220, 20%, 12%, 0.18);
+    border: 1px solid hsla(345, 40%, 25%, 0.10);
   }
 
   /* Premium Heart Animation */
@@ -208,10 +227,23 @@
   }
 
   @keyframes heartbeat-premium {
-    0%, 100% { transform: scale(1) }
-    25% { transform: scale(1.05) }
-    50% { transform: scale(1.1) }
-    75% { transform: scale(1.05) }
+
+    0%,
+    100% {
+      transform: scale(1)
+    }
+
+    25% {
+      transform: scale(1.05)
+    }
+
+    50% {
+      transform: scale(1.1)
+    }
+
+    75% {
+      transform: scale(1.05)
+    }
   }
 
   /* Envelope Animation Enhanced */
@@ -220,9 +252,17 @@
   }
 
   @keyframes envelope-premium {
-    0% { transform: perspective(1000px) rotateX(0deg) scale(0.8) }
-    50% { transform: perspective(1000px) rotateX(-90deg) scale(0.9) }
-    100% { transform: perspective(1000px) rotateX(0deg) scale(1) }
+    0% {
+      transform: perspective(1000px) rotateX(0deg) scale(0.8)
+    }
+
+    50% {
+      transform: perspective(1000px) rotateX(-90deg) scale(0.9)
+    }
+
+    100% {
+      transform: perspective(1000px) rotateX(0deg) scale(1)
+    }
   }
 
   /* Premium Fireworks */
@@ -251,14 +291,17 @@
       opacity: 1;
       transform: scale(0) rotate(0deg);
     }
+
     25% {
       opacity: 1;
       transform: scale(1) rotate(90deg);
     }
+
     50% {
       opacity: 0.8;
       transform: scale(1.2) rotate(180deg);
     }
+
     100% {
       opacity: 0;
       transform: scale(0.3) rotate(360deg);
@@ -283,8 +326,15 @@
   }
 
   @keyframes letter-write-premium {
-    from { opacity: 0; transform: translateY(2px); }
-    to { opacity: 1; transform: translateY(0); }
+    from {
+      opacity: 0;
+      transform: translateY(2px);
+    }
+
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
   }
 
   /* Magnetic Button Effect */
@@ -321,5 +371,16 @@
     z-index: 9999;
     transform-origin: left;
     transition: transform 0.1s ease-out;
+  }
+
+  /* Remover backgrounds de utilitários globais */
+  .bg-background,
+  .bg-gradient-dreamy,
+  .bg-gradient-mesh,
+  .bg-gradient-hero,
+  .bg-gradient-romantic,
+  .bg-gradient-secret,
+  .bg-gradient-golden {
+    background: none !important;
   }
 }

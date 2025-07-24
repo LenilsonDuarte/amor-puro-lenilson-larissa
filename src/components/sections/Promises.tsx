@@ -91,11 +91,11 @@ const Promises = () => {
           <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
             {promises.map((promise, index) => {
               const Icon = promise.icon;
-              
+
               return (
-                <Card 
+                <Card
                   key={index}
-                  className="reveal romantic-glow hover:scale-105 transition-all duration-500"
+                  className="glass-card border-love/30 romantic-glow backdrop-blur-xl bg-black/60 reveal hover:scale-105 transition-all duration-500"
                   style={{ animationDelay: `${index * 0.1}s` }}
                 >
                   <CardContent className="p-8">
@@ -119,14 +119,14 @@ const Promises = () => {
           </div>
 
           <div className="mt-16 text-center reveal">
-            <Card className="bg-gradient-romantic border-love/30 romantic-glow">
+            <Card className="glass-card border-love/30 romantic-glow backdrop-blur-xl bg-black/60">
               <CardContent className="p-8">
                 <Heart className="w-16 h-16 mx-auto text-love mb-6 heartbeat" />
                 <h3 className="text-3xl font-playfair font-bold text-foreground mb-4">
                   Todas essas promessas são seladas com amor infinito
                 </h3>
                 <p className="text-xl text-foreground/80 leading-relaxed">
-                  Cada palavra é uma extensão do meu coração, 
+                  Cada palavra é uma extensão do meu coração,
                   cada promessa é um pedaço da minha alma entregue a você.
                 </p>
               </CardContent>

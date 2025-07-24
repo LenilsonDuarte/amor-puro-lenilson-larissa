@@ -47,32 +47,34 @@ const MusicPlayer = () => {
       <audio
         ref={audioRef}
         loop
-        // src="/path-to-um-amor-puro-djavan.mp3"
+      // src="/path-to-um-amor-puro-djavan.mp3"
       />
-      
+
       <Button
         variant="secondary"
         size="sm"
         onClick={togglePlay}
-        className="glass-card hover-lift magnetic-btn group"
+        className="glass-card hover-lift magnetic-btn group border border-love/20 shadow-lg focus:ring-2 focus:ring-love/40 focus:outline-none"
+        style={{ boxShadow: '0 2px 16px 0 rgba(255,0,64,0.10)' }}
       >
         {isPlaying ? (
-          <Pause className="h-4 w-4 transition-transform group-hover:scale-110" />
+          <Pause className="h-4 w-4 transition-transform group-hover:scale-110 text-love" />
         ) : (
-          <Play className="h-4 w-4 transition-transform group-hover:scale-110" />
+          <Play className="h-4 w-4 transition-transform group-hover:scale-110 text-love" />
         )}
       </Button>
-      
+
       <Button
         variant="secondary"
         size="sm"
         onClick={toggleMute}
-        className="glass-card hover-lift magnetic-btn group"
+        className="glass-card hover-lift magnetic-btn group border border-love/20 shadow-lg focus:ring-2 focus:ring-love/40 focus:outline-none"
+        style={{ boxShadow: '0 2px 16px 0 rgba(255,0,64,0.10)' }}
       >
         {isMuted ? (
-          <VolumeX className="h-4 w-4 transition-transform group-hover:scale-110" />
+          <VolumeX className="h-4 w-4 transition-transform group-hover:scale-110 text-love" />
         ) : (
-          <Volume2 className="h-4 w-4 transition-transform group-hover:scale-110" />
+          <Volume2 className="h-4 w-4 transition-transform group-hover:scale-110 text-love" />
         )}
       </Button>
     </div>
