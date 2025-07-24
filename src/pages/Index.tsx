@@ -3,6 +3,7 @@ import VideoBackground from '@/components/VideoBackground';
 import MusicPlayer from '@/components/MusicPlayer';
 import OpeningScreen from '@/components/OpeningScreen';
 import Navigation from '@/components/Navigation';
+import PremiumEffects from '@/components/PremiumEffects';
 import OurStory from '@/components/sections/OurStory';
 import Timeline from '@/components/sections/Timeline';
 import Gallery from '@/components/sections/Gallery';
@@ -21,8 +22,9 @@ const Index = () => {
 
   return (
     <div className="relative min-h-screen">
-      {/* Background Video */}
+      {/* Premium Effects & Background */}
       <VideoBackground />
+      <PremiumEffects />
       
       {/* Music Player */}
       <MusicPlayer />

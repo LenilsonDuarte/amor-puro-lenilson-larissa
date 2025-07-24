@@ -42,7 +42,7 @@ const MusicPlayer = () => {
   };
 
   return (
-    <div className="fixed top-6 right-6 z-50 flex gap-2">
+    <div className="fixed top-8 right-8 z-50 flex gap-3">
       {/* TODO: Add actual "Um Amor Puro - Djavan" audio file */}
       <audio
         ref={audioRef}
@@ -54,18 +54,26 @@ const MusicPlayer = () => {
         variant="secondary"
         size="sm"
         onClick={togglePlay}
-        className="dreamy-blur hover:shadow-dreamy transition-all duration-300"
+        className="glass-card hover-lift magnetic-btn group"
       >
-        {isPlaying ? <Pause className="h-4 w-4" /> : <Play className="h-4 w-4" />}
+        {isPlaying ? (
+          <Pause className="h-4 w-4 transition-transform group-hover:scale-110" />
+        ) : (
+          <Play className="h-4 w-4 transition-transform group-hover:scale-110" />
+        )}
       </Button>
       
       <Button
         variant="secondary"
         size="sm"
         onClick={toggleMute}
-        className="dreamy-blur hover:shadow-dreamy transition-all duration-300"
+        className="glass-card hover-lift magnetic-btn group"
       >
-        {isMuted ? <VolumeX className="h-4 w-4" /> : <Volume2 className="h-4 w-4" />}
+        {isMuted ? (
+          <VolumeX className="h-4 w-4 transition-transform group-hover:scale-110" />
+        ) : (
+          <Volume2 className="h-4 w-4 transition-transform group-hover:scale-110" />
+        )}
       </Button>
     </div>
   );

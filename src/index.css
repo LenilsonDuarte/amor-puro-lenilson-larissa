@@ -1,83 +1,91 @@
-@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;500;600;700&family=Inter:wght@300;400;500;600&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;700;800;900&family=SF+Pro+Display:wght@100;200;300;400;500;600;700;800;900&display=swap');
 
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
 
-/* Cinematographic Love Story Design System */
+/* Apple-Inspired Premium Design System */
 
 @layer base {
   :root {
-    /* Romantic Pastel Palette */
-    --background: 350 20% 98%;
-    --foreground: 340 15% 25%;
+    /* Apple-Inspired Premium Palette */
+    --background: 0 0% 98%;
+    --foreground: 0 0% 10%;
 
-    --card: 350 30% 97%;
-    --card-foreground: 340 15% 25%;
+    --card: 0 0% 100%;
+    --card-foreground: 0 0% 10%;
 
-    --popover: 350 30% 97%;
-    --popover-foreground: 340 15% 25%;
+    --popover: 0 0% 100%;
+    --popover-foreground: 0 0% 10%;
 
-    /* Romantic Pink as Primary */
-    --primary: 340 60% 75%;
-    --primary-foreground: 350 20% 98%;
+    /* Sophisticated Primary - Deep Space Gray */
+    --primary: 220 20% 15%;
+    --primary-foreground: 0 0% 98%;
 
-    /* Soft Lavender as Secondary */
-    --secondary: 270 40% 85%;
-    --secondary-foreground: 340 15% 25%;
+    /* Elegant Secondary - Pearl White */
+    --secondary: 210 20% 96%;
+    --secondary-foreground: 220 20% 15%;
 
-    /* Muted Pastels */
-    --muted: 320 25% 92%;
-    --muted-foreground: 340 10% 45%;
+    /* Refined Muted */
+    --muted: 210 20% 94%;
+    --muted-foreground: 220 10% 40%;
 
-    /* Golden Accent */
-    --accent: 45 85% 80%;
-    --accent-foreground: 340 15% 25%;
+    /* Luxury Accent - Rose Gold */
+    --accent: 15 60% 85%;
+    --accent-foreground: 220 20% 15%;
 
-    /* Romantic Red for Hearts */
-    --love: 0 70% 65%;
-    --love-foreground: 350 20% 98%;
+    /* Romantic Love - Sophisticated Pink */
+    --love: 345 70% 65%;
+    --love-foreground: 0 0% 98%;
 
-    /* Secret Section Colors */
-    --secret: 0 60% 50%;
-    --secret-foreground: 0 0% 100%;
+    /* Premium Secret - Deep Burgundy */
+    --secret: 345 40% 35%;
+    --secret-foreground: 0 0% 98%;
 
     --destructive: 0 84.2% 60.2%;
     --destructive-foreground: 210 40% 98%;
 
-    --border: 320 20% 88%;
-    --input: 320 20% 88%;
-    --ring: 340 60% 75%;
+    --border: 220 15% 88%;
+    --input: 220 15% 88%;
+    --ring: 220 20% 15%;
 
-    --radius: 1rem;
+    --radius: 1.5rem;
 
-    /* Cinematic Gradients */
-    --gradient-romantic: linear-gradient(135deg, hsl(340, 60%, 85%), hsl(270, 40%, 85%));
-    --gradient-dreamy: linear-gradient(180deg, hsl(350, 20%, 98%), hsl(320, 25%, 92%));
-    --gradient-golden: linear-gradient(135deg, hsl(45, 85%, 80%), hsl(35, 75%, 75%));
-    --gradient-secret: linear-gradient(135deg, hsl(0, 60%, 50%), hsl(340, 60%, 40%));
+    /* Premium Gradients */
+    --gradient-hero: linear-gradient(135deg, hsl(220, 20%, 15%) 0%, hsl(345, 40%, 35%) 50%, hsl(15, 60%, 85%) 100%);
+    --gradient-glass: linear-gradient(135deg, hsla(0, 0%, 100%, 0.1) 0%, hsla(0, 0%, 100%, 0.05) 100%);
+    --gradient-mesh: radial-gradient(ellipse at top, hsl(345, 70%, 65%, 0.1) 0%, transparent 50%),
+                     radial-gradient(ellipse at bottom right, hsl(15, 60%, 85%, 0.1) 0%, transparent 50%),
+                     radial-gradient(ellipse at bottom left, hsl(220, 20%, 15%, 0.05) 0%, transparent 50%);
+    --gradient-premium: linear-gradient(180deg, hsla(0, 0%, 100%, 0.02) 0%, hsla(0, 0%, 100%, 0.01) 100%);
 
-    /* Elegant Shadows */
-    --shadow-romantic: 0 20px 40px -10px hsl(340 60% 75% / 0.3);
-    --shadow-dreamy: 0 10px 30px -5px hsl(270 40% 85% / 0.4);
-    --shadow-golden: 0 15px 35px -8px hsl(45 85% 80% / 0.5);
+    /* Apple-Style Shadows */
+    --shadow-sm: 0 1px 2px 0 rgb(0 0 0 / 0.05);
+    --shadow-md: 0 4px 6px -1px rgb(0 0 0 / 0.1), 0 2px 4px -2px rgb(0 0 0 / 0.1);
+    --shadow-lg: 0 10px 15px -3px rgb(0 0 0 / 0.1), 0 4px 6px -4px rgb(0 0 0 / 0.1);
+    --shadow-xl: 0 20px 25px -5px rgb(0 0 0 / 0.1), 0 8px 10px -6px rgb(0 0 0 / 0.1);
+    --shadow-2xl: 0 25px 50px -12px rgb(0 0 0 / 0.25);
+    --shadow-premium: 0 32px 64px -12px rgb(0 0 0 / 0.15), 0 0 0 1px rgb(255 255 255 / 0.05);
+    --shadow-glow: 0 0 40px hsl(345 70% 65% / 0.3);
 
-    /* Smooth Transitions */
-    --transition-romantic: all 0.6s cubic-bezier(0.4, 0, 0.2, 1);
-    --transition-dreamy: all 0.8s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+    /* Fluid Transitions */
+    --transition-premium: all 0.4s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+    --transition-smooth: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+    --transition-bounce: all 0.5s cubic-bezier(0.68, -0.55, 0.265, 1.55);
   }
 
   .dark {
-    --background: 340 20% 8%;
-    --foreground: 350 15% 90%;
-    --card: 340 25% 10%;
-    --card-foreground: 350 15% 90%;
-    --primary: 340 60% 70%;
-    --secondary: 270 40% 20%;
-    --muted: 320 25% 15%;
-    --accent: 45 85% 70%;
-    --border: 320 20% 20%;
-    --input: 320 20% 20%;
+    --background: 220 20% 8%;
+    --foreground: 0 0% 95%;
+    --card: 220 25% 10%;
+    --card-foreground: 0 0% 95%;
+    --primary: 0 0% 95%;
+    --secondary: 220 20% 15%;
+    --muted: 220 25% 12%;
+    --accent: 15 60% 75%;
+    --border: 220 20% 18%;
+    --input: 220 20% 18%;
+    --ring: 0 0% 95%;
   }
 }
 
@@ -87,88 +95,138 @@
   }
 
   body {
-    @apply bg-background text-foreground font-inter;
-    background: linear-gradient(135deg, hsl(350, 20%, 98%), hsl(320, 25%, 92%));
+    @apply bg-background text-foreground;
+    font-family: 'Inter', 'SF Pro Display', -apple-system, BlinkMacSystemFont, system-ui, sans-serif;
+    background: var(--gradient-mesh), hsl(var(--background));
     min-height: 100vh;
+    overflow-x: hidden;
   }
 
   h1, h2, h3, h4, h5, h6 {
-    @apply font-playfair;
+    font-family: 'SF Pro Display', 'Inter', -apple-system, BlinkMacSystemFont, system-ui, sans-serif;
+    font-weight: 600;
+    letter-spacing: -0.02em;
   }
 }
 
 @layer components {
-  /* Typewriter Effect */
-  .typewriter {
-    overflow: hidden;
-    border-right: 0.15em solid hsl(var(--primary));
-    white-space: nowrap;
-    margin: 0 auto;
-    letter-spacing: 0.15em;
-    animation: typing 3.5s steps(40, end), blink-caret 0.75s step-end infinite;
+  /* Apple-Style Glass Morphism */
+  .glass {
+    background: var(--gradient-glass);
+    backdrop-filter: blur(20px) saturate(180%);
+    border: 1px solid hsla(0, 0%, 100%, 0.1);
+    box-shadow: var(--shadow-premium);
   }
 
-  @keyframes typing {
+  .glass-card {
+    background: hsla(0, 0%, 100%, 0.03);
+    backdrop-filter: blur(40px) saturate(200%);
+    border: 1px solid hsla(0, 0%, 100%, 0.08);
+    box-shadow: var(--shadow-xl), inset 0 1px 0 hsla(0, 0%, 100%, 0.1);
+  }
+
+  /* Premium Typewriter Effect */
+  .typewriter-premium {
+    overflow: hidden;
+    border-right: 0.1em solid hsl(var(--love));
+    white-space: nowrap;
+    margin: 0 auto;
+    letter-spacing: -0.02em;
+    animation: typing-premium 3s steps(40, end), blink-premium 1s step-end infinite;
+  }
+
+  @keyframes typing-premium {
     from { width: 0 }
     to { width: 100% }
   }
 
-  @keyframes blink-caret {
+  @keyframes blink-premium {
     from, to { border-color: transparent }
-    50% { border-color: hsl(var(--primary)) }
+    50% { border-color: hsl(var(--love)) }
   }
 
-  /* Floating Animation */
-  .float {
-    animation: float 6s ease-in-out infinite;
+  /* Floating with Physics */
+  .float-premium {
+    animation: float-premium 8s ease-in-out infinite;
   }
 
-  @keyframes float {
-    0%, 100% { transform: translateY(0px) }
-    50% { transform: translateY(-20px) }
+  @keyframes float-premium {
+    0%, 100% { transform: translateY(0px) rotate(0deg) }
+    25% { transform: translateY(-10px) rotate(0.5deg) }
+    50% { transform: translateY(-20px) rotate(0deg) }
+    75% { transform: translateY(-10px) rotate(-0.5deg) }
   }
 
-  /* Romantic Glow */
-  .romantic-glow {
-    box-shadow: var(--shadow-romantic);
-    transition: var(--transition-romantic);
+  /* Premium Hover Effects */
+  .hover-lift {
+    transition: var(--transition-premium);
   }
 
-  .romantic-glow:hover {
-    box-shadow: 0 25px 50px -10px hsl(340 60% 75% / 0.5);
-    transform: translateY(-5px);
+  .hover-lift:hover {
+    transform: translateY(-8px) scale(1.02);
+    box-shadow: var(--shadow-2xl);
   }
 
-  /* Dreamy Blur Background */
-  .dreamy-blur {
-    backdrop-filter: blur(20px);
-    background: hsl(350 20% 98% / 0.8);
-    border: 1px solid hsl(320 20% 88% / 0.5);
+  /* Sophisticated Glow */
+  .glow-premium {
+    position: relative;
   }
 
-  /* Heart Beat Animation */
-  .heartbeat {
-    animation: heartbeat 1.5s ease-in-out infinite;
+  .glow-premium::before {
+    content: '';
+    position: absolute;
+    inset: -1px;
+    padding: 1px;
+    background: var(--gradient-hero);
+    border-radius: inherit;
+    mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0);
+    mask-composite: xor;
+    opacity: 0;
+    transition: opacity 0.3s ease;
   }
 
-  @keyframes heartbeat {
+  .glow-premium:hover::before {
+    opacity: 1;
+  }
+
+  /* Apple-Style Parallax */
+  .parallax {
+    transform-style: preserve-3d;
+    transition: transform 0.1s ease-out;
+  }
+
+  /* Sophisticated Blur Background */
+  .blur-bg {
+    backdrop-filter: blur(40px) saturate(200%);
+    background: hsla(0, 0%, 100%, 0.05);
+    border: 1px solid hsla(0, 0%, 100%, 0.1);
+  }
+
+  /* Premium Heart Animation */
+  .heartbeat-premium {
+    animation: heartbeat-premium 2s ease-in-out infinite;
+  }
+
+  @keyframes heartbeat-premium {
     0%, 100% { transform: scale(1) }
+    25% { transform: scale(1.05) }
     50% { transform: scale(1.1) }
+    75% { transform: scale(1.05) }
   }
 
-  /* Envelope Opening Animation */
-  .envelope-open {
-    animation: envelope-open 1s ease-out;
+  /* Envelope Animation Enhanced */
+  .envelope-premium {
+    animation: envelope-premium 1.2s cubic-bezier(0.68, -0.55, 0.265, 1.55);
   }
 
-  @keyframes envelope-open {
-    0% { transform: rotateX(0deg) }
-    50% { transform: rotateX(-90deg) }
-    100% { transform: rotateX(0deg) }
+  @keyframes envelope-premium {
+    0% { transform: perspective(1000px) rotateX(0deg) scale(0.8) }
+    50% { transform: perspective(1000px) rotateX(-90deg) scale(0.9) }
+    100% { transform: perspective(1000px) rotateX(0deg) scale(1) }
   }
 
-  /* Fireworks */
-  .fireworks {
+  /* Premium Fireworks */
+  .fireworks-premium {
     position: fixed;
     top: 0;
     left: 0;
@@ -178,49 +236,90 @@
     z-index: 9999;
   }
 
-  .firework {
+  .firework-premium {
     position: absolute;
-    width: 4px;
-    height: 4px;
+    width: 6px;
+    height: 6px;
     background: hsl(var(--love));
     border-radius: 50%;
-    animation: firework-explosion 2s ease-out;
+    box-shadow: 0 0 10px hsl(var(--love)), 0 0 20px hsl(var(--love));
+    animation: firework-premium 3s ease-out;
   }
 
-  @keyframes firework-explosion {
+  @keyframes firework-premium {
     0% {
       opacity: 1;
-      transform: scale(0);
+      transform: scale(0) rotate(0deg);
+    }
+    25% {
+      opacity: 1;
+      transform: scale(1) rotate(90deg);
     }
     50% {
-      opacity: 1;
-      transform: scale(1);
+      opacity: 0.8;
+      transform: scale(1.2) rotate(180deg);
     }
     100% {
       opacity: 0;
-      transform: scale(0.5);
+      transform: scale(0.3) rotate(360deg);
     }
   }
 
-  /* Scroll Reveal */
-  .reveal {
+  /* Sophisticated Reveal */
+  .reveal-premium {
     opacity: 0;
-    transform: translateY(30px);
-    transition: all 0.8s ease-out;
+    transform: translateY(60px) scale(0.95);
+    transition: all 1s cubic-bezier(0.25, 0.46, 0.45, 0.94);
   }
 
-  .reveal.revealed {
+  .reveal-premium.revealed {
     opacity: 1;
-    transform: translateY(0);
+    transform: translateY(0) scale(1);
   }
 
-  /* Letter Writing Animation */
-  .letter-write {
-    animation: letter-write 0.1s steps(1, end);
+  /* Letter Writing Enhanced */
+  .letter-write-premium {
+    animation: letter-write-premium 0.08s steps(1, end);
   }
 
-  @keyframes letter-write {
-    from { opacity: 0 }
-    to { opacity: 1 }
+  @keyframes letter-write-premium {
+    from { opacity: 0; transform: translateY(2px); }
+    to { opacity: 1; transform: translateY(0); }
+  }
+
+  /* Magnetic Button Effect */
+  .magnetic-btn {
+    position: relative;
+    transition: var(--transition-premium);
+  }
+
+  .magnetic-btn:hover {
+    transform: translateY(-2px);
+  }
+
+  .magnetic-btn::before {
+    content: '';
+    position: absolute;
+    inset: 0;
+    background: var(--gradient-hero);
+    border-radius: inherit;
+    opacity: 0;
+    transition: opacity 0.3s ease;
+  }
+
+  .magnetic-btn:hover::before {
+    opacity: 0.1;
+  }
+
+  /* Premium Scroll Indicator */
+  .scroll-indicator {
+    position: fixed;
+    top: 0;
+    left: 0;
+    height: 4px;
+    background: var(--gradient-hero);
+    z-index: 9999;
+    transform-origin: left;
+    transition: transform 0.1s ease-out;
   }
 }
