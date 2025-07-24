@@ -55,26 +55,28 @@ const SecretSection = () => {
       <div className="container mx-auto px-4">
         <div className="max-w-4xl mx-auto">
           <div className="text-center mb-16 reveal">
-            <Lock className="w-12 h-12 mx-auto text-secret mb-6" />
-            <h2 className="text-4xl md:text-6xl font-playfair font-bold text-foreground mb-6">
+            <Lock className="w-12 h-12 mx-auto text-secret mb-6 animate-pulse" />
+            <h2 className="text-5xl md:text-7xl font-playfair font-bold text-secret drop-shadow-glow mb-6">
               Área Secreta
             </h2>
-            <p className="text-xl text-muted-foreground font-inter">
-              Só para nossos olhos... 😏
+            <p className="text-2xl text-white/80 italic font-handwritten tracking-wide">
+              Só nós sabemos ein... 😏
             </p>
           </div>
+
 
           <div className="text-center reveal">
             <Dialog open={isOpen} onOpenChange={setIsOpen}>
               <DialogTrigger asChild>
                 <Button
                   size="lg"
-                  className="bg-gradient-secret hover:shadow-xl transition-all duration-300 text-lg px-8 py-4"
+                  className="bg-gradient-secret hover:shadow-2xl ring-2 ring-love/50 hover:ring-love text-lg px-10 py-5 rounded-full font-semibold transition-all duration-300 hover:scale-105"
                 >
-                  <Lock className="w-5 h-5 mr-2" />
+                  <Lock className="w-5 h-5 mr-2 animate-bounce-slow" />
                   Entrar na Área Secreta
                 </Button>
               </DialogTrigger>
+
 
               <DialogContent className="max-w-md">
                 <DialogHeader>
@@ -131,7 +133,7 @@ const SecretSection = () => {
                       </h3>
                     </div>
 
-                    <Card className="glass-card border-love/30 romantic-glow backdrop-blur-xl bg-black/60">
+                    <Card className="glass-card border-love/30 romantic-glow backdrop-blur-xl bg-black/60" style={{ maxHeight: '70vh', overflowY: 'auto' }}>
                       <CardContent className="p-6 text-center">
                         <p className="text-lg text-foreground mb-4">
                           Você tem acesso a algo que só nós dois sabemos... 😏

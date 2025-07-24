@@ -76,12 +76,12 @@ Lenilson ❤️`;
   };
 
   return (
-    <section id="cartinha" ref={sectionRef} className="relative py-20 md:py-32 flex flex-col items-center justify-center min-h-[80vh]">
+    <section id="cartinha" ref={sectionRef} className="relative flex flex-col items-center justify-center">
       <div className="container mx-auto px-4 flex flex-col items-center justify-center">
         <div className="max-w-4xl mx-auto">
           <div className="text-center mb-16 reveal">
             <Mail className="w-12 h-12 mx-auto text-love mb-6 animate-bounce" />
-            <h2 className="text-4xl md:text-6xl font-playfair font-bold text-foreground mb-6 animate-fade-in">
+            <h2 className="text-5xl md:text-7xl font-playfair font-bold text-secret drop-shadow-glow mb-8">
               Cartinha do Coração
             </h2>
             <p className="text-xl text-muted-foreground font-inter animate-fade-in">

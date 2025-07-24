@@ -28,7 +28,7 @@ const Gallery = () => {
         <div className="max-w-6xl mx-auto">
           <div className="text-center mb-16 reveal">
             <Camera className="w-12 h-12 mx-auto text-primary mb-6 drop-shadow-lg" />
-            <h2 className="text-4xl md:text-6xl font-playfair font-bold text-foreground mb-6 drop-shadow">
+            <h2 className="text-5xl md:text-7xl font-playfair font-bold text-secret drop-shadow-glow mb-8">
               Nossa Galeria
             </h2>
             <p className="text-xl text-muted-foreground font-inter drop-shadow">
@@ -37,7 +37,7 @@ const Gallery = () => {
           </div>
 
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-            {[1, 2, 3, 4, 5, 6, 7, 8, 9, 10].map((index) => (
+            {[1, 2, 3, 4, 5, 6, 7, 8, 9].map((index) => (
               <div
                 key={index}
                 className="reveal group cursor-pointer"

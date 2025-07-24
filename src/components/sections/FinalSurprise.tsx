@@ -72,26 +72,37 @@ const FinalSurprise = () => {
       <div className="container mx-auto px-4">
         <div className="max-w-4xl mx-auto">
           {!isRevealed ? (
-            <div className="text-center reveal">
-              <div className="mb-16">
-                <AlertTriangle className="w-12 h-12 mx-auto text-love mb-6 animate-bounce" />
-                <h2 className="text-4xl md:text-6xl font-playfair font-bold text-foreground mb-6">
+            <div>
+              <div className="text-center reveal mb-10 flex flex-col items-center justify-center">
+                <AlertTriangle className="w-12 h-12 mx-auto text-secret mb-6 animate-bounce" />
+                <h2 className="text-5xl md:text-7xl font-playfair font-bold text-secret drop-shadow-glow mb-6">
                   Atenção!
                 </h2>
-                <p className="text-xl text-muted-foreground font-inter mb-8">
+                <p className="text-2xl text-white/80 italic font-handwritten tracking-wide">
                   Há algo muito especial aqui... mas você foi avisada! 😳
                 </p>
               </div>
+              {/* resto do conteúdo do bloco não revelado */}
+              <div className="flex justify-center mt-8">
+                <Button
+                  onClick={triggerSurprise}
+                  size="lg"
+                  className="bg-gradient-secret hover:shadow-2xl ring-2 ring-love/50 hover:ring-love text-lg px-10 py-5 rounded-full font-semibold transition-all duration-300 hover:scale-105 mx-auto w-full max-w-xs md:max-w-md text-center flex items-center justify-center text-white"
+                >
+                  <AlertTriangle className="w-5 h-5 mr-2" />
+                  Não clique aqui 😳
+                </Button>
+              </div>
 
-              <Button
-                onClick={triggerSurprise}
-                size="lg"
-                variant="outline"
-                className="text-lg px-8 py-4 border-love/50 text-love hover:bg-love/10 hover:border-love transition-all duration-300 hover:scale-105"
-              >
-                <AlertTriangle className="w-5 h-5 mr-2" />
-                Não clique aqui 😳
-              </Button>
+              <style>{`
+                .animate-soft-blink {
+                  animation: softBlink 2s ease-in-out infinite;
+                }
+                @keyframes softBlink {
+                  0%, 100% { opacity: 1; filter: brightness(1); }
+                  50% { opacity: 0.8; filter: brightness(1.3); }
+                }
+              `}</style>
             </div>
           ) : (
             <div className="space-y-12">
@@ -150,7 +161,7 @@ const FinalSurprise = () => {
           )}
         </div>
       </div>
-    </section>
+    </section >
   );
 };
 

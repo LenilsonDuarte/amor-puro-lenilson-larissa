@@ -1,8 +1,13 @@
 import { useState, useEffect } from 'react';
 import { Button } from '@/components/ui/button';
+import { useIsMobile } from '@/hooks/use-mobile';
+import { Drawer, DrawerTrigger, DrawerContent } from '@/components/ui/drawer';
+import { Menu, X } from 'lucide-react';
 
 const Navigation = () => {
   const [isVisible, setIsVisible] = useState(false);
+  const [drawerOpen, setDrawerOpen] = useState(false);
+  const isMobile = useIsMobile();
 
   useEffect(() => {
     const handleScroll = () => {
@@ -29,6 +34,46 @@ const Navigation = () => {
     { id: 'segredos', label: 'Segredos' },
     { id: 'surpresa', label: 'Surpresa Final' },
   ];
+
+  if (isMobile) {
+    return (
+      <nav className="fixed top-0 left-0 z-50">
+        <Drawer open={drawerOpen} onOpenChange={setDrawerOpen} direction="left">
+          <DrawerTrigger asChild>
+            <button className={`p-2 rounded-full bg-love/90 hover:bg-love/80 text-white shadow-lg focus:outline-none z-50 fixed top-4 ${isMobile ? 'left-2' : 'left-4'}`} style={{ transition: 'background 0.2s' }}>
+              {drawerOpen ? <X className="w-7 h-7" /> : <Menu className="w-7 h-7" />}
+            </button>
+          </DrawerTrigger>
+          <DrawerContent className="fixed inset-0 pb-8 pt-20 bg-black/90 border-none shadow-2xl flex flex-col items-center justify-center gap-8">
+            <div className="w-full flex justify-start px-6 md:hidden mb-4">
+              <span className="flex items-center text-sm text-white/60 font-sf select-none">
+                <svg width="20" height="20" fill="none" viewBox="0 0 20 20" className="mr-1"><path d="M13 16l-5-5 5-5" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" /></svg>
+                arraste para fechar
+              </span>
+            </div>
+            <div className="flex flex-col items-center gap-6 w-full">
+              {menuItems.map((item) => (
+                <Button
+                  key={item.id}
+                  variant="ghost"
+                  size="lg"
+                  onClick={() => {
+                    scrollToSection(item.id);
+                    // Fechar o drawer após clicar
+                    const evt = new KeyboardEvent('keydown', { key: 'Escape' });
+                    window.dispatchEvent(evt);
+                  }}
+                  className="w-4/5 max-w-xs font-sf text-lg font-medium text-foreground/90 hover:text-love hover:bg-love/15 transition-all duration-300 px-6 py-3 rounded-xl"
+                >
+                  {item.label}
+                </Button>
+              ))}
+            </div>
+          </DrawerContent>
+        </Drawer>
+      </nav>
+    );
+  }
 
   return (
     <nav

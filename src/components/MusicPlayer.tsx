@@ -1,84 +1,81 @@
-import { useState, useRef, useEffect } from 'react';
-import { Play, Pause, Volume2, VolumeX } from 'lucide-react';
-import { Button } from '@/components/ui/button';
+import { useState, useRef, useEffect } from 'react'
+import { Play, Pause, Volume2, VolumeX } from 'lucide-react'
+import { Button } from '@/components/ui/button'
+import { useIsMobile } from '@/hooks/use-mobile';
 
 const MusicPlayer = () => {
-  const [isPlaying, setIsPlaying] = useState(false);
-  const [isMuted, setIsMuted] = useState(false);
-  const audioRef = useRef<HTMLAudioElement>(null);
+  const [isPlaying, setIsPlaying] = useState(false)
+  const [isMuted, setIsMuted] = useState(false)
+  const audioRef = useRef<HTMLAudioElement>(null)
+  const isMobile = useIsMobile();
 
   useEffect(() => {
-    // Auto-start music after 2 seconds
-    const timer = setTimeout(() => {
-      if (audioRef.current) {
-        audioRef.current.play().then(() => {
-          setIsPlaying(true);
-        }).catch(() => {
-          // Handle autoplay restrictions
-          console.log('Autoplay was prevented');
-        });
-      }
-    }, 2000);
+    const audio = audioRef.current
+    if (!audio) return
 
-    return () => clearTimeout(timer);
-  }, []);
+    const handleLoadedMetadata = () => {
+      audio.currentTime = 0 // ⬅️ Altere aqui se quiser iniciar em outro segundo
+    }
+
+    const timer = setTimeout(() => {
+      audio.addEventListener('loadedmetadata', handleLoadedMetadata)
+
+      audio.play()
+        .then(() => setIsPlaying(true))
+        .catch(() => {
+          console.log('Autoplay bloqueado pelo navegador.')
+        })
+    }, 2000)
+
+    return () => {
+      clearTimeout(timer)
+      audio.removeEventListener('loadedmetadata', handleLoadedMetadata)
+    }
+  }, [])
 
   const togglePlay = () => {
-    if (audioRef.current) {
-      if (isPlaying) {
-        audioRef.current.pause();
-      } else {
-        audioRef.current.play();
-      }
-      setIsPlaying(!isPlaying);
+    const audio = audioRef.current
+    if (!audio) return
+
+    if (isPlaying) {
+      audio.pause()
+    } else {
+      audio.play()
     }
-  };
+    setIsPlaying(!isPlaying)
+  }
 
   const toggleMute = () => {
-    if (audioRef.current) {
-      audioRef.current.muted = !isMuted;
-      setIsMuted(!isMuted);
-    }
-  };
+    const audio = audioRef.current
+    if (!audio) return
+
+    audio.muted = !isMuted
+    setIsMuted(!isMuted)
+  }
 
   return (
-    <div className="fixed top-8 right-8 z-50 flex gap-3">
-      {/* TODO: Add actual "Um Amor Puro - Djavan" audio file */}
+    <div className={`fixed top-4 ${isMobile ? 'right-2' : 'right-4'} z-50`}>
       <audio
         ref={audioRef}
         loop
-      // src="/path-to-um-amor-puro-djavan.mp3"
+        preload="auto"
+        src="https://archive.org/download/nina-simone-the-great-nina-simone/The%20Great%20Nina%20Simone/03%20I%20Loves%20You%20Porgy.mp3"
       />
-
       <Button
-        variant="secondary"
-        size="sm"
-        onClick={togglePlay}
-        className="glass-card hover-lift magnetic-btn group border border-love/20 shadow-lg focus:ring-2 focus:ring-love/40 focus:outline-none"
-        style={{ boxShadow: '0 2px 16px 0 rgba(255,0,64,0.10)' }}
-      >
-        {isPlaying ? (
-          <Pause className="h-4 w-4 transition-transform group-hover:scale-110 text-love" />
-        ) : (
-          <Play className="h-4 w-4 transition-transform group-hover:scale-110 text-love" />
-        )}
-      </Button>
-
-      <Button
-        variant="secondary"
-        size="sm"
+        variant="ghost"
+        size="icon"
         onClick={toggleMute}
-        className="glass-card hover-lift magnetic-btn group border border-love/20 shadow-lg focus:ring-2 focus:ring-love/40 focus:outline-none"
-        style={{ boxShadow: '0 2px 16px 0 rgba(255,0,64,0.10)' }}
+        className="m-0 p-2 rounded-full bg-love/90 hover:bg-love/80 text-white shadow-lg focus:outline-none border-none"
+        style={{ boxShadow: '0 8px 32px 0 rgba(255,0,64,0.18)' }}
       >
         {isMuted ? (
-          <VolumeX className="h-4 w-4 transition-transform group-hover:scale-110 text-love" />
+          <VolumeX className="w-7 h-7" />
         ) : (
-          <Volume2 className="h-4 w-4 transition-transform group-hover:scale-110 text-love" />
+          <Volume2 className="w-7 h-7" />
         )}
       </Button>
     </div>
-  );
-};
+  )
+}
 
-export default MusicPlayer;
+export default MusicPlayer

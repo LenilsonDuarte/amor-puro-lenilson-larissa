@@ -80,7 +80,7 @@ const Promises = () => {
         <div className="max-w-6xl mx-auto">
           <div className="text-center mb-16 reveal">
             <Infinity className="w-12 h-12 mx-auto text-love mb-6" />
-            <h2 className="text-4xl md:text-6xl font-playfair font-bold text-foreground mb-6">
+            <h2 className="text-5xl md:text-7xl font-playfair font-bold text-secret drop-shadow-glow mb-8">
               Promessas & Planos
             </h2>
             <p className="text-xl text-muted-foreground font-inter">
