@@ -18,6 +18,10 @@ export default {
 			}
 		},
 		extend: {
+			fontFamily: {
+				'playfair': ['Playfair Display', 'serif'],
+				'inter': ['Inter', 'sans-serif'],
+			},
 			colors: {
 				border: 'hsl(var(--border))',
 				input: 'hsl(var(--input))',
@@ -44,6 +48,14 @@ export default {
 					DEFAULT: 'hsl(var(--accent))',
 					foreground: 'hsl(var(--accent-foreground))'
 				},
+				love: {
+					DEFAULT: 'hsl(var(--love))',
+					foreground: 'hsl(var(--love-foreground))'
+				},
+				secret: {
+					DEFAULT: 'hsl(var(--secret))',
+					foreground: 'hsl(var(--secret-foreground))'
+				},
 				popover: {
 					DEFAULT: 'hsl(var(--popover))',
 					foreground: 'hsl(var(--popover-foreground))'
@@ -62,6 +74,21 @@ export default {
 					border: 'hsl(var(--sidebar-border))',
 					ring: 'hsl(var(--sidebar-ring))'
 				}
+			},
+			backgroundImage: {
+				'gradient-romantic': 'var(--gradient-romantic)',
+				'gradient-dreamy': 'var(--gradient-dreamy)',
+				'gradient-golden': 'var(--gradient-golden)',
+				'gradient-secret': 'var(--gradient-secret)',
+			},
+			boxShadow: {
+				'romantic': 'var(--shadow-romantic)',
+				'dreamy': 'var(--shadow-dreamy)',
+				'golden': 'var(--shadow-golden)',
+			},
+			transitionTimingFunction: {
+				'romantic': 'var(--transition-romantic)',
+				'dreamy': 'var(--transition-dreamy)',
 			},
 			borderRadius: {
 				lg: 'var(--radius)',

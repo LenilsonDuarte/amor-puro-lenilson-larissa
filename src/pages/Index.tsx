@@ -1,12 +1,56 @@
-// Update this page (the content is just a fallback if you fail to update the page)
+import { useState } from 'react';
+import VideoBackground from '@/components/VideoBackground';
+import MusicPlayer from '@/components/MusicPlayer';
+import OpeningScreen from '@/components/OpeningScreen';
+import Navigation from '@/components/Navigation';
+import OurStory from '@/components/sections/OurStory';
+import Timeline from '@/components/sections/Timeline';
+import Gallery from '@/components/sections/Gallery';
+import LoveLetter from '@/components/sections/LoveLetter';
+import Promises from '@/components/sections/Promises';
+import SecretSection from '@/components/sections/SecretSection';
+import FinalSurprise from '@/components/sections/FinalSurprise';
+import Footer from '@/components/Footer';
 
 const Index = () => {
+  const [showContent, setShowContent] = useState(false);
+
+  const handleOpeningComplete = () => {
+    setShowContent(true);
+  };
+
   return (
-    <div className="min-h-screen flex items-center justify-center bg-background">
-      <div className="text-center">
-        <h1 className="text-4xl font-bold mb-4">Welcome to Your Blank App</h1>
-        <p className="text-xl text-muted-foreground">Start building your amazing project here!</p>
-      </div>
+    <div className="relative min-h-screen">
+      {/* Background Video */}
+      <VideoBackground />
+      
+      {/* Music Player */}
+      <MusicPlayer />
+      
+      {/* Opening Screen */}
+      {!showContent && <OpeningScreen onComplete={handleOpeningComplete} />}
+      
+      {/* Main Content */}
+      {showContent && (
+        <>
+          {/* Navigation */}
+          <Navigation />
+          
+          {/* Main Content */}
+          <main className="relative z-10">
+            <OurStory />
+            <Timeline />
+            <Gallery />
+            <LoveLetter />
+            <Promises />
+            <SecretSection />
+            <FinalSurprise />
+          </main>
+          
+          {/* Footer */}
+          <Footer />
+        </>
+      )}
     </div>
   );
 };
