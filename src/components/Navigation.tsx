@@ -32,7 +32,6 @@ const Navigation = () => {
     { id: 'cartinha', label: 'Cartinha' },
     { id: 'promessas', label: 'Promessas' },
     { id: 'segredos', label: 'Segredos' },
-    { id: 'surpresa', label: 'Surpresa Final' },
   ];
 
   if (isMobile) {
